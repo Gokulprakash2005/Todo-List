@@ -15,7 +15,7 @@
         <div class="card-body">
             <h1 class="card-title text-center">To Do List</h1>
             <div class="input-group mb-3">
-                <input type="text" id="results" class="form-control " maxlength="50" placeholder="Enter the Text...."  >
+                <input type="text" id="results" class="form-control " maxlength="20" placeholder="Enter the Text...."  >
                 <i class="fa-solid fa-plus fa-2x " onclick="adds()"></i>
             </div>
             <div id="todo-list" class="list-group">
@@ -32,6 +32,7 @@
             v3.className = "list-group-item d-flex justify-content-between ";
             v3.innerHTML = v2 + '<i class="fa-solid fa-x" onclick="deletes(event)"></i>';
             v1.append(v3);
+            document.getElementById("results").value="";
         }
 
         function deletes(event) {
